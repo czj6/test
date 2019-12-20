@@ -38,6 +38,7 @@ ipt1.onblur = function(){
 	if(!email.test(str1))
 	{
 		alert("邮箱格式不正确");
+		ipt1.blur();
 	}
 }
 ipt2.onblur = iptjudge;
@@ -65,6 +66,7 @@ function iptjudge()
 					else
 					{
 						alert("数字只能在2和8之间");
+						ipt2.blur();
 						ipt2.style.borderColor = "#ff5b5b";
 						return false;
 					}
@@ -72,6 +74,7 @@ function iptjudge()
 				else
 				{
 					alert("大写字母必须三个及以上");
+					ipt2.blur();
 					ipt2.style.borderColor = "#ff5b5b";
 					return false;
 				}
@@ -79,6 +82,7 @@ function iptjudge()
 			else
 			{
 				alert("特殊字符只能一个");
+				ipt2.blur();
 				ipt2.style.borderColor = "#ff5b5b";
 				return false;
 			}
@@ -86,6 +90,7 @@ function iptjudge()
 		else
 		{
 			alert("字符不能重复");
+			ipt2.blur();
 			ipt2.style.borderColor = "#ff5b5b";
 			return false;
 		}
@@ -94,6 +99,7 @@ function iptjudge()
 	else
 	{
 		alert("密码长度要求在9~15位之间");
+		ipt2.blur();
 		ipt2.style.borderColor = "#ff5b5b";
 		return false;
 	}
@@ -108,6 +114,7 @@ function iptjudge2(){
 	else
 	{
 		alert("两次填写的密码不一致");
+		ipt3.blur();
 		return false;
 	}
 }
